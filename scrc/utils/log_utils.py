@@ -24,8 +24,15 @@ def get_logger(name='debug_logger', default_path=ROOT_DIR / 'logging.yaml', defa
         with open(path, 'rt') as f:
             try:
                 config = yaml.safe_load(f.read())
-                logging.config.dictConfig(config)
+                print('config load success')
+                try: #Try to isolate error
+                    logging.config.dictConfig(config)
+                except Exception as e: #Try to isolate error
+                    print("Failed to configure logging: ", str(e))
+                #logging.config.dictConfig(config)
+                #print('logging_loading success')
                 coloredlogs.install()
+                print('coloredlogs install succes')
             except Exception as e:
                 print(e)
                 print('Error in Logging Configuration. Using default configs')
@@ -39,3 +46,4 @@ def get_logger(name='debug_logger', default_path=ROOT_DIR / 'logging.yaml', defa
     logger = logging.getLogger(name)
     logger.setLevel(os.getenv("LOGLEVEL", "DEBUG"))
     return logger
+
