@@ -5,7 +5,7 @@ from pathlib import Path
 # TODO use everywhere where we need to parse with bs4
 import cchardet
 import lxml
-
+import time 
 import bs4
 import glob
 import requests
@@ -30,27 +30,28 @@ class Scraper(AbstractPreprocessor):
         self.logger = get_logger(__name__)
 
     def download_subfolders(self, url: str):
-        """
-        Download entire subfolders recursively
-        :param url:
-        :return: list of paths of new downloaded files
-        """
-        self.logger.info(f"Started downloading from {url}")
-        r = requests.get(url)  # get starting page
-        data = bs4.BeautifulSoup(r.text, "lxml")  # parse html
-        links = data.find_all("a")  # find all links
+#    """
+#    Download entire subfolders recursively
+#    :param url:
+#    :return: list of paths of new downloaded files
+#    """
+        try:
+            self.logger.info(f"Started downloading from {url}")
+            r = requests.get(url)  # get starting page
+            data = bs4.BeautifulSoup(r.text, "lxml")  # parse html
+            links = data.find_all("a")  # find all links
+            included_links = [Path(link["href"]) for link in links if not self.link_is_excluded(link.text)]
+            self.logger.info(f"Found {len(included_links)} spiders/folders in total")
+            all_new_files: list[Path] = []
+            for link in included_links:
+                new_files = self.download_files(link)
+                all_new_files.extend(new_files)
+                self.logger.info(f"Finished downloading from {url}")
+            return all_new_files
+        except Exception as e:
+            self.logger.error(f"Caught an exception while processing {str(url)}\n{e}")
+#            time.sleep(5*60)
 
-        included_links = [Path(link["href"]) for link in links if not self.link_is_excluded(link.text)]
-        self.logger.info(f"Found {len(included_links)} spiders/folders in total")
-
-        all_new_files: list[Path] = []
-        for link in included_links:
-            new_files = self.download_files(link)
-            all_new_files.extend(new_files)
-
-        self.logger.info(f"Finished downloading from {url}")
-
-        return all_new_files
 
     def link_is_excluded(self, link_text: str):
         """ Exclude links other than the folders to the courts """
