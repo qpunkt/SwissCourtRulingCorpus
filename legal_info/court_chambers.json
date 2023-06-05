@@ -596,7 +596,10 @@
                         "it": "Bau, Verkehr und Umwelt"
                     },
                     "AG_VB_002": {
-                        "spider": "AG_Weitere"
+                        "spider": "AG_Gerichte",
+                        "de": "Bildung, Kultur und Sport",
+                        "fr": "Bildung, Kultur und Sport",
+                        "it": "Bildung, Kultur und Sport"
                     },
                     "AG_VB_003": {
                         "spider": "AG_Gerichte"
@@ -629,52 +632,13 @@
                     }
                 }
             },
-            "AG_OGA": {
-                "de": "Obergericht (AGVE)",
-                "fr": "Obergericht (AGVE)",
-                "it": "Obergericht (AGVE)",
+            "AG_GB": {
+                "de": "Entscheide Grundbuch und Notariat",
+                "fr": "Entscheide Grundbuch und Notariat",
+                "it": "Entscheide Grundbuch und Notariat",
                 "kammern": {
-                    "AG_OGA_001": {
-                        "spider": "AG_Weitere",
-                        "de": "Verwaltungsgericht",
-                        "fr": "Verwaltungsgericht",
-                        "it": "Verwaltungsgericht"
-                    },
-                    "AG_OGA_002": {
-                        "spider": "AG_Weitere",
-                        "de": "Handelsgericht",
-                        "fr": "Handelsgericht",
-                        "it": "Handelsgericht"
-                    },
-                    "AG_OGA_003": {
-                        "spider": "AG_Weitere",
-                        "de": "Versicherungsgericht",
-                        "fr": "Versicherungsgericht",
-                        "it": "Versicherungsgericht"
-                    },
-                    "AG_OGA_004": {
-                        "spider": "AG_Weitere",
-                        "de": "Justizgericht",
-                        "fr": "Justizgericht",
-                        "it": "Justizgericht"
-                    },
-                    "AG_OGA_005": {
-                        "spider": "AG_Weitere",
-                        "de": "Zivilkammern",
-                        "fr": "Zivilkammern",
-                        "it": "Zivilkammern"
-                    },
-                    "AG_OGA_006": {
-                        "spider": "AG_Weitere",
-                        "de": "Kammer f\u00fcr Kindes- und Erwachsenenschutz",
-                        "fr": "Kammer f\u00fcr Kindes- und Erwachsenenschutz",
-                        "it": "Kammer f\u00fcr Kindes- und Erwachsenenschutz"
-                    },
-                    "AG_OGA_999": {
-                        "spider": "AG_Weitere",
-                        "de": "Sonstige Abteilung",
-                        "fr": "Sonstige Abteilung",
-                        "it": "Sonstige Abteilung"
+                    "AG_GB_001": {
+                        "spider": "AG_Weitere"
                     }
                 }
             },

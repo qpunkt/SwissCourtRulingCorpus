@@ -5,11 +5,11 @@
   CAREFUL! The file contains a (1) DROP command at the top. Comment out if you do not want to DROP the tables.
 */
 
-DROP TABLE IF EXISTS "language", canton, canton_name, spider, court, court_name, chamber, lower_court, "file", decision, 
-	judgment, judgment_map, citation_type, citation, section_type, "section", num_tokens, file_number,
-    judicial_person_type, person, judicial_person, party_type, party;
+# DROP TABLE IF EXISTS "language", canton, canton_name, spider, court, court_name, chamber, lower_court, "file", decision, 
+#	judgment, judgment_map, citation_type, citation, section_type, "section", num_tokens, file_number,
+#    judicial_person_type, person, judicial_person, party_type, party;
 
-CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+#CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 
 CREATE TABLE IF NOT EXISTS "language"(
   language_id SERIAL PRIMARY KEY,
@@ -76,7 +76,7 @@ CREATE TABLE IF NOT EXISTS lower_court(
   chamber_id INTEGER REFERENCES chamber,
   "date" DATE,
   file_number TEXT,
-  decision_id INTEGER NOT NULL REFERENCES decision
+  decision_id UUID NOT NULL REFERENCES decision
 );
 
 CREATE TABLE IF NOT EXISTS judgment(

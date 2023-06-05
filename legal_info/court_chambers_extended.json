@@ -1002,7 +1002,10 @@
                         ]
                     },
                     "AG_VB_002": {
-                        "spider": "AG_Weitere",
+                        "spider": "AG_Gerichte",
+                        "de": "Bildung, Kultur und Sport",
+                        "fr": "Bildung, Kultur und Sport",
+                        "it": "Bildung, Kultur und Sport",
                         "Rechtsgebiete": [
                             ""
                         ]
@@ -1050,99 +1053,13 @@
                     }
                 }
             },
-            "AG_OGA": {
-                "de": "Obergericht (AGVE)",
-                "fr": "Obergericht (AGVE)",
-                "it": "Obergericht (AGVE)",
+            "AG_GB": {
+                "de": "Entscheide Grundbuch und Notariat",
+                "fr": "Entscheide Grundbuch und Notariat",
+                "it": "Entscheide Grundbuch und Notariat",
                 "kammern": {
-                    "AG_OGA_001": {
+                    "AG_GB_001": {
                         "spider": "AG_Weitere",
-                        "de": "Verwaltungsgericht",
-                        "fr": "Verwaltungsgericht",
-                        "it": "Verwaltungsgericht",
-                        "Rechtsgebiete": [
-                            "1.5",
-                            "2.1",
-                            "2.2",
-                            "2.3",
-                            "2.4",
-                            "2.5",
-                            "2.6",
-                            "2.7",
-                            "2.8",
-                            "2.9",
-                            "2.10",
-                            "2.11",
-                            "2.12"
-                        ]
-                    },
-                    "AG_OGA_002": {
-                        "spider": "AG_Weitere",
-                        "de": "Handelsgericht",
-                        "fr": "Handelsgericht",
-                        "it": "Handelsgericht",
-                        "Rechtsgebiete": [
-                            "1.1",
-                            "1.5",
-                            "1.6",
-                            "1.7",
-                            "1.8",
-                            "1.9",
-                            "1.10",
-                            "1.11",
-                            "1.12",
-                            "1.13",
-                            "1.14",
-                            "1.15"
-                        ]
-                    },
-                    "AG_OGA_003": {
-                        "spider": "AG_Weitere",
-                        "de": "Versicherungsgericht",
-                        "fr": "Versicherungsgericht",
-                        "it": "Versicherungsgericht",
-                        "Rechtsgebiete": [
-                            "1.6",
-                            "4.1",
-                            "4.2"
-                        ]
-                    },
-                    "AG_OGA_004": {
-                        "spider": "AG_Weitere",
-                        "de": "Justizgericht",
-                        "fr": "Justizgericht",
-                        "it": "Justizgericht",
-                        "Rechtsgebiete": [
-                            "2.1",
-                            "2.2"
-                        ]
-                    },
-                    "AG_OGA_005": {
-                        "spider": "AG_Weitere",
-                        "de": "Zivilkammern",
-                        "fr": "Zivilkammern",
-                        "it": "Zivilkammern",
-                        "Rechtsgebiete": [
-                            ""
-                        ]
-                    },
-                    "AG_OGA_006": {
-                        "spider": "AG_Weitere",
-                        "de": "Kammer f\u00fcr Kindes- und Erwachsenenschutz",
-                        "fr": "Kammer f\u00fcr Kindes- und Erwachsenenschutz",
-                        "it": "Kammer f\u00fcr Kindes- und Erwachsenenschutz",
-                        "Rechtsgebiete": [
-                            "1.3",
-                            "1.4",
-                            "1.13",
-                            "2.10"
-                        ]
-                    },
-                    "AG_OGA_999": {
-                        "spider": "AG_Weitere",
-                        "de": "Sonstige Abteilung",
-                        "fr": "Sonstige Abteilung",
-                        "it": "Sonstige Abteilung",
                         "Rechtsgebiete": [
                             ""
                         ]

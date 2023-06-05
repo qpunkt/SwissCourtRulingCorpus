@@ -43,7 +43,7 @@ class CreateCourtAndChamberTables(AbstractPreprocessor):
         except Exception as e:
             self.logger.error(f"Caught an exception while processing {str(url)}\n{e}")
     
-    def get_cantons(self)-> pd.DataFrame:
+    def get_cantons(self):
         return list(self.select(self.get_engine(self.db_scrc), 'canton'))[0]
     
     def get_existing_courts(self):
